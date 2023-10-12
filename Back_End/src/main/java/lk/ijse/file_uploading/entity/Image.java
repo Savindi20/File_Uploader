@@ -1,6 +1,5 @@
 package lk.ijse.file_uploading.entity;
 
-import lk.ijse.file_uploading.dto.ImageDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +19,7 @@ import javax.persistence.Id;
 public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+   private Integer id;
     private String fileString;
 
     public Image(String fileString) {

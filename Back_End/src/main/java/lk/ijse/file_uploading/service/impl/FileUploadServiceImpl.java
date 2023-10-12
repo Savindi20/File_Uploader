@@ -41,7 +41,7 @@ public class FileUploadServiceImpl implements FileUploadService {
             throw new RuntimeException(e);
         }
         System.out.println(img);
-        repo.save(img);
+       repo.save(img);
 
     }
 

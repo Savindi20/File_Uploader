@@ -25,6 +25,7 @@ import javax.sql.DataSource;
 public class JPAConfig {
     @Autowired
     private Environment env;
+
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource ds, JpaVendorAdapter va) {
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
