@@ -1,39 +1,45 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="assets/styles/boostrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/styles/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/styles/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>File Uploader</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--link Bootstrap Framework-->
+    <link href="assets/styles/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/styles/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/styles/style.css" rel="stylesheet">
+
+
 </head>
 <body>
-<header class="p-3 mb-2 bg-dark text-white">
-  <h2>Image Uploader</h2>
+<header class="container-fluid bg-dark p-2 hColor">
+    <h2 class="text-white center">Image Uploader</h2>
 </header>
 <section class="container mt-5">
-  <div class="row justify-content-around">
-    <div class="col-5">
-      <div  class="sectionBorder border w-100" style="height: 310px">
-        <div id="display" class="border border-1, w-100" style="height: 300px"></div>
-      </div>
-    </div>
-    <div class="col-4 mt-5">
-      <form id="formFile">
-        <div class="input-group-lg">
-          <label for="fileString" class="form-label"><h3>Upload Picture</h3>
-            <hr></label>
-          <input class="form-control mt-2" name="fileString" type="file" id="fileString"
-                 aria-describedby="inputGroup-sizing-lg" multiple>
+    <div class="row justify-content-around">
+        <div class="col-5">
+            <div  class="sectionBorder border w-100" style="height: 310px">
+                <div id="display" class="border border-1, w-100" style="height: 300px"></div>
+            </div>
         </div>
-        <button type="button" id="btnUpload" class="btn btn-outline-danger mt-3 btn-lg fw-bolder">Upload File</button>
-      </form>
+        <div class="col-4 mt-5">
+            <form id="formFile">
+                <div class="input-group-lg">
+                    <label for="fileString" class="form-label"><h3>Upload Picture</h3>
+                        <hr></label>
+                    <input class="form-control mt-2" name="fileString" type="file" id="fileString"
+                           aria-describedby="inputGroup-sizing-lg" multiple>
+                </div>
+                <button type="button" id="btnUpload" class="btn btn-outline-danger mt-3 btn-lg fw-bolder">Upload File</button>
+            </form>
+        </div>
     </div>
-  </div>
 </section>
 
-<script src="assets/styles/boostrap/js/bootstrap.min.js"></script>
-<script rel="script" src="assets/styles/Jquery/jquery-3.7.0.min.js"></script>
+<!--Import js for bootstrap-->
+<script src="assets/styles/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+<!--import jQuery library-->
+<script rel="script" src="assets/styles/jQuery/jquery-3.6.1.min.js"></script>
 <script src="controller/FileUploadcontroller.js"></script>
 </body>
 </html>
