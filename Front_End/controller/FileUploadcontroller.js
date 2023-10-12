@@ -1,44 +1,34 @@
 let baseUrl = "http://localhost:8080/Back_End_war/";
 
-loadTheLastUploadedImage();
-
 $("#btnUpload").click(function () {
-    var data = new FormData();
-    let file = $("#formFileMultiple")[0].files[0];
-    let fileName = $("#formFileMultiple")[0].files[0].name;
-    data.append("image", file, fileName);
-
+    let formData = new FormData($("#formFile")[0]);
     $.ajax({
-        url: baseUrl + "upload",
+        url: baseUrl + "uploads",
         method: 'post',
         async: true,
         contentType: false,
         processData: false,
-        data: data,
+        data: formData,
         success: function (resp) {
-            alert("Uploaded Successfully");
-            loadTheLastUploadedImage();
+            alert("Successfully upload;");
+            imageLoad();
         },
         error: function (err) {
             console.log(err);
         }
     });
 });
-
-function loadTheLastUploadedImage() {
+imageLoad();
+function imageLoad() {
     $.ajax({
-        url: baseUrl + "upload",
+        url: baseUrl + "uploads/lastImageLoad",
         method: 'get',
-        dataType: 'json',
         success: function (resp) {
-            let url = resp[resp.length - 1];
-
+            console.log(resp.data);
+            url1 = resp.data
             $("#display").css({
-                "background": `url(${baseUrl + url})`,
-                "background-size": "cover",
-                "height": "450px"
+                "background": `url(${baseUrl + url1})`, "background-size": "cover"
             });
-
         },
         error: function (err) {
             console.log(err);
