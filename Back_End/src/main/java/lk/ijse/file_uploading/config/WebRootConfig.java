@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Import;
 @ComponentScan(basePackages = "lk.ijse.file_uploading.service")
 public class WebRootConfig {
     @Bean
-    public ModelMapper modelMapper(){
+    public ModelMapper modelMapper() {
         return new ModelMapper();
     }
 }
