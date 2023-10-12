@@ -15,13 +15,19 @@
 <section class="container mt-5">
   <div class="row justify-content-around">
     <div class="col-5">
-      <div id="display" class="sectionBorder border border-1, w-100" style="height: 400px"></div>
+      <div  class="sectionBorder border w-100" style="height: 400px">
+        <div id="display" class="border border-1, w-100" style="height: 400px"></div>
+      </div>
     </div>
     <div class="col-4 mt-5">
-      <form>
-        <label for="file">Upload Picture</label>
-        <input id="file" name="myFile" type="file" class="form-control mt-2">
-        <button type="button" id="btnUpload" class="btn btn-primary mt-3">Upload File</button>
+      <form id="formFile">
+        <div class="input-group-lg">
+          <label for="fileString" class="form-label"><h3>Upload Picture</h3>
+            <hr></label>
+          <input class="form-control mt-2" name="fileString" type="file" id="fileString"
+                 aria-describedby="inputGroup-sizing-lg" multiple>
+        </div>
+        <button type="button" id="btnUpload" class="btn btn-outline-danger mt-3 btn-lg fw-bolder">Upload File</button>
       </form>
     </div>
   </div>
@@ -29,6 +35,6 @@
 
 <script src="assets/styles/boostrap/js/bootstrap.min.js"></script>
 <script rel="script" src="assets/styles/Jquery/jquery-3.7.0.min.js"></script>
-
+<script src="controller/FileUploadcontroller.js"></script>
 </body>
 </html>

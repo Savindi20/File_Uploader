@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackageClasses = {})
+@ComponentScan(basePackages = {"lk.ijse.file_uploading.config"})
 public class WebAppConfig {
     public WebAppConfig(){
         System.out.println("WebAppConfig: Instantiated");
